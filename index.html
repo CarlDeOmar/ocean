@@ -205,4 +205,20 @@
             sidemenu.style.right = "-200px";
         }
     </script>
-    
+    <script>
+        import { config, library, dom } from '@fortawesome/fontawesome-svg-core'
+
+  # Change the config to fix the flicker
+  config.mutateApproach = 'sync'
+
+  # An example icon
+  import {
+    faGithub
+  } from '@fortawesome/free-brands-svg-icons'
+
+  library.add(
+    faGithub
+  )
+
+  dom.watch()
+    </script>
